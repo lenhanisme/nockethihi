@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Trải Nghiệm Locket Gold Vĩnh Viên Free - Không iPA , Shadowrocket ! | LOCKETVN - VNSoftware</title>
+    <title>Locket Gold Unlocker - LocketVN</title>
     
     <link rel="icon" href="unnamed.jpg" type="image/jpeg">
     
@@ -19,16 +19,12 @@
         .gold-text { background: linear-gradient(90deg, #FFD700, #FFF3A0, #FFD700); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shine 4s linear infinite; }
         @keyframes shine { to { background-position: 200% center; } }
         
-        .gold-btn { background: linear-gradient(135deg, #FFD700, #F5C400, #E6B800); box-shadow: 0 10px 30px rgba(255, 200, 0, 0.4); border: none; color: white; font-weight: 700; cursor: pointer; transition: all 0.3s; }
-        .gold-btn:hover { transform: scale(1.05); box-shadow: 0 15px 40px rgba(255, 200, 0, 0.5); }
+        .gold-btn { background: linear-gradient(135deg, #FFD700, #F5C400, #E6B800); box-shadow: 0 10px 30px rgba(255, 200, 0, 0.4); border: none; color: #000; font-weight: 800; cursor: pointer; transition: all 0.3s; }
+        .gold-btn:hover { transform: scale(1.02); box-shadow: 0 15px 40px rgba(255, 200, 0, 0.5); }
         .gold-btn:disabled { opacity: 0.7; transform: none; cursor: not-allowed; }
 
         .glass { backdrop-filter: blur(18px); background: rgba(20, 20, 20, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); }
         .glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, #FFD700, transparent 70%); filter: blur(100px); opacity: 0.1; z-index: -1; pointer-events: none; }
-        
-        /* --- FLOATING ANIMATIONS --- */
-        .floating-heart { position: fixed; font-size: 80px; z-index: -1; opacity: 0.6; pointer-events: none; }
-        /* (Giữ nguyên các keyframe float từ source gốc nếu muốn, ở đây làm gọn lại) */
         
         /* --- LAYOUT --- */
         header { border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: sticky; top: 0; z-index: 50; }
@@ -39,7 +35,7 @@
         .container { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
         
         .card { width: 100%; max-width: 480px; padding: 32px 24px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
+        /* .card:hover { transform: translateY(-5px); } */
         
         .card-header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid rgba(255, 215, 0, 0.3); }
         .card-header h2 { font-size: 28px; font-weight: 800; margin-bottom: 8px; color: #e0e0e0; }
@@ -56,11 +52,13 @@
         .config-btn { width: 100%; padding: 14px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #b0b0b0; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
         .config-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; border-color: rgba(255, 255, 255, 0.3); }
 
-        /* --- FEATURES GRID --- */
+        /* --- NEW FEATURES GRID (UPDATED) --- */
         .features { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .features-title { color: #e0e0e0; font-weight: 700; font-size: 14px; margin-bottom: 16px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
-        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .feature-item { display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(255, 215, 0, 0.05); border-radius: 10px; border: 1px solid rgba(255, 215, 0, 0.1); font-size: 13px; color: #ccc; }
+        .features-title { color: #e0e0e0; font-weight: 700; font-size: 16px; margin-bottom: 20px; text-align: center; }
+        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .feature-item { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 10px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 215, 0, 0.1); font-size: 13px; color: #ccc; transition: all 0.3s ease; }
+        .feature-item:hover { border-color: rgba(255, 215, 0, 0.3); background: rgba(255, 215, 0, 0.05); transform: translateY(-2px); }
+        .feature-icon-lg { font-size: 28px; margin-bottom: 10px; display: block; }
         
         /* --- LOADING SCREEN --- */
         .loading-screen { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0f0f0f; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.6s ease-out; }
@@ -74,26 +72,39 @@
         .welcome-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(5px); }
         .welcome-modal.show { display: flex; animation: fadeIn 0.3s ease; }
         .welcome-content { background: #1a1a1a; border: 2px solid #FFD700; border-radius: 24px; padding: 40px 30px; max-width: 450px; width: 100%; text-align: center; box-shadow: 0 0 50px rgba(255, 215, 0, 0.2); position: relative; }
-        .welcome-btn { width: 100%; padding: 14px; margin-top: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; border: none; }
-        .btn-ok { background: #FFD700; color: #000; }
-        .btn-skip { background: transparent; color: #888; border: 1px solid #333; }
+        .welcome-btn { width: 100%; padding: 14px; margin-top: 10px; border-radius: 12px; cursor: pointer; font-weight: 700; border: none; transition: all 0.2s; }
+        .btn-ok { background: linear-gradient(135deg, #FFD700, #F5C400, #E6B800); color: #000; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+        .btn-ok:hover { transform: scale(1.02); }
+        .btn-skip { background: transparent; color: #aaa; border: 2px solid rgba(255,255,255,0.1); }
+        .btn-skip:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* --- SWEETALERT CUSTOM --- */
-        div:where(.swal2-container) div:where(.swal2-popup) { background: #1a1a1a !important; border: 1px solid #333; border-radius: 20px !important; }
-        .swal2-title { color: #fff !important; }
-        .swal2-html-container { color: #ccc !important; }
-        .swal-btn-confirm { background: linear-gradient(135deg, #FFD700, #E6B800) !important; color: #000 !important; font-weight: 700 !important; border-radius: 10px !important; padding: 12px 24px !important; width: 100%; margin-bottom: 10px; }
-        .swal-btn-cancel { background: rgba(255,255,255,0.1) !important; color: #fff !important; border-radius: 10px !important; width: 100%; }
+        /* --- SWEETALERT CUSTOM UI (REDUX) --- */
+        div:where(.swal2-container) div:where(.swal2-popup) { background: #1a1a1a !important; border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 24px !important; padding: 30px 24px !important; }
+        .swal2-title { color: #fff !important; font-size: 22px !important; font-weight: 800 !important; }
+        .swal2-html-container { color: #ccc !important; margin: 20px 0 !important; }
+        
+        /* Actions container - Stack buttons with gap */
+        div:where(.swal2-container) .swal2-actions { flex-direction: column-reverse; gap: 12px; width: 100%; margin-top: 20px !important; }
+
+        /* Confirm Button - Gold Style */
+        .swal-btn-confirm { background: linear-gradient(135deg, #FFD700, #F5C400, #E6B800) !important; color: #000 !important; font-weight: 800 !important; border-radius: 12px !important; padding: 16px 24px !important; width: 100% !important; box-shadow: 0 5px 20px rgba(255, 200, 0, 0.3); border: none !important; font-size: 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px; }
+        
+        /* Cancel Button - Outline Style */
+        .swal-btn-cancel { background: transparent !important; color: #b0b0b0 !important; border: 2px solid rgba(255,255,255,0.15) !important; border-radius: 12px !important; padding: 14px 24px !important; width: 100% !important; font-weight: 700 !important; font-size: 15px !important; transition: all 0.2s; }
+        .swal-btn-cancel:hover { border-color: rgba(255,255,255,0.4) !important; color: #fff !important; }
+
+        /* User info in SweetAlert */
+        .user-avatar-ring { width: 100px; height: 100px; margin: 0 auto 20px; padding: 4px; border: 2px dashed #FFD700; border-radius: 50%; }
+        .user-avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .swal-user-name { font-size: 20px; font-weight: 700; color: white; margin-bottom: 5px; }
+        .swal-user-uid { color: #FFD700; font-size: 14px; font-weight: 600; background: rgba(255, 215, 0, 0.1); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 20px; }
 
         /* Queue UI */
-        .queue-container { text-align: left; margin-top: 15px; background: rgba(0,0,0,0.3); padding: 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); }
-        .progress-track { height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; margin: 10px 0; }
-        .progress-fill { height: 100%; background: #FFD700; width: 0%; transition: width 0.5s; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
-        .queue-stats { display: flex; justify-content: space-between; color: #fff; font-size: 13px; font-weight: 600; }
-        
-        .user-avatar-ring { width: 90px; height: 90px; margin: 0 auto 15px; padding: 3px; border: 2px dashed #FFD700; border-radius: 50%; }
-        .user-avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .queue-container { text-align: left; margin-top: 15px; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,215,0,0.1); }
+        .progress-track { height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; margin: 12px 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #FFD700, #F5C400); width: 0%; transition: width 0.5s ease-in-out; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+        .queue-stats { display: flex; justify-content: space-between; color: #aaa; font-size: 13px; font-weight: 600; }
         
         /* Footer */
         footer { text-align: center; padding: 20px; font-size: 13px; color: #666; margin-top: auto; }
@@ -104,19 +115,22 @@
     <div id="loadingScreen" class="loading-screen">
         <div class="loading-container">
             <div class="loading-spinner"></div>
-            <div class="loading-text">LOCKET.VN</div>
+            <div class="loading-text">LOCKETVN GOLD</div>
         </div>
     </div>
 
     <div id="welcomeModal" class="welcome-modal">
         <div class="welcome-content">
             <div style="font-size: 50px; margin-bottom: 15px;">👋</div>
-            <h2 class="gold-text" style="font-size: 24px; margin-bottom: 10px;">Xin chào!</h2>
-            <p style="color: #bbb; margin-bottom: 25px; line-height: 1.5;">Chào mừng bạn đến với hệ thống kích hoạt Locket Gold miễn phí của LocketVN.</p>
+            <h2 class="gold-text" style="font-size: 26px; margin-bottom: 10px;">Xin chào!</h2>
+            <p style="color: #bbb; margin-bottom: 25px; line-height: 1.5; font-size: 15px;">Chào mừng bạn đến với hệ thống kích hoạt Locket Gold miễn phí của LocketVN.</p>
             
-            <div style="background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.2); padding: 15px; border-radius: 12px; text-align: left; margin-bottom: 20px;">
-                <strong style="color: #FFD700;">💡 Lưu ý:</strong><br>
-                <span style="font-size: 13px; color: #ccc;">Vui lòng tải Config iOS sau khi kích hoạt thành công gói Locket Gold để tránh bị mất Gold sau này.</span>
+            <div style="background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.2); padding: 18px; border-radius: 16px; text-align: left; margin-bottom: 25px; display: flex; gap: 12px; align-items: flex-start;">
+                <i class="fa-solid fa-lightbulb" style="color: #FFD700; font-size: 20px; margin-top: 2px;"></i>
+                <div>
+                    <strong style="color: #FFD700; font-size: 15px;">Lưu ý quan trọng:</strong><br>
+                    <span style="font-size: 14px; color: #ccc; line-height: 1.4; display: block; margin-top: 5px;">Vui lòng tải và cài đặt <b>Config iOS</b> trước khi kích hoạt để tránh bị mất Gold sau này.</span>
+                </div>
             </div>
 
             <button class="welcome-btn btn-ok" onclick="closeWelcomeModal()">Bắt đầu ngay 🚀</button>
@@ -131,9 +145,9 @@
         <div class="max-w-6xl">
             <a href="/" class="nav-brand">
                 <img src="unnamed.jpg" alt="Logo" class="nav-logo">
-                <span class="font-bold text-lg gold-text" style="font-weight: 800;">LocketVN</span>
+                <span class="font-bold text-lg gold-text" style="font-weight: 800; font-size: 20px;">LocketVN</span>
             </a>
-            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -154,16 +168,44 @@
             </button>
 
             <a href="lenhan.mobileconfig" class="config-btn">
-                <i class="fa-brands fa-apple"></i> Tải Config Chống Revoke (iOS)
+                <i class="fa-brands fa-apple" style="font-size: 18px;"></i> Tải Config Chống Revoke (iOS)
             </a>
 
             <div class="features">
-                <p class="features-title">Tính năng đã mở khóa</p>
+                <p class="features-title">Tính năng Locket Gold bao gồm:</p>
                 <div class="features-grid">
-                    <div class="feature-item"><i class="fa-solid fa-video" style="color:#FFD700"></i> Video ngắn</div>
-                    <div class="feature-item"><i class="fa-solid fa-ban" style="color:#FFD700"></i> No Ads</div>
-                    <div class="feature-item"><i class="fa-solid fa-upload" style="color:#FFD700"></i> Upload ảnh</div>
-                    <div class="feature-item"><i class="fa-solid fa-icons" style="color:#FFD700"></i> Icon App</div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">🚫</span>
+                        <span>Không có quảng cáo</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">🎦</span>
+                        <span>Quay Video ngắn</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">👀</span>
+                        <span>Xem ai đã truy cập</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">🎞</span>
+                        <span>Tải ảnh từ thư viện</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">👨‍👩‍👧</span>
+                        <span>Thêm bạn bè</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">💛</span>
+                        <span>Thay icon app</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">✏️</span>
+                        <span>Caption dài hơn</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon-lg">✨</span>
+                        <span>Huy hiệu Gold</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,10 +218,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const API_URL = '/api'; 
+        // Updated SweetAlert mixin for new button styles
         const swalIOS = Swal.mixin({ 
             customClass: { confirmButton: 'swal-btn-confirm', cancelButton: 'swal-btn-cancel' }, 
             buttonsStyling: false, 
-            reverseButtons: true 
+            reverseButtons: true // Important for stacking order
         });
 
         /* --- LOADING SCREEN LOGIC --- */
@@ -208,7 +251,7 @@
         /* --- MAIN UNLOCK LOGIC --- */
         async function checkUserInfo() {
             const username = document.getElementById('username').value.trim();
-            if (!username) return swalIOS.fire('Lỗi', 'Vui lòng nhập Username!', 'warning');
+            if (!username) return swalIOS.fire({ icon: 'warning', title: 'Lỗi', text: 'Vui lòng nhập Username!' });
 
             toggleBtnLoading(true);
 
@@ -223,10 +266,10 @@
                 if (res.ok && data.success) {
                     showConfirm(data.data);
                 } else {
-                    swalIOS.fire('Thất bại', 'Không tìm thấy user này.', 'error');
+                    swalIOS.fire({ icon: 'error', title: 'Thất bại', text: 'Không tìm thấy user này.' });
                 }
             } catch (e) {
-                swalIOS.fire('Lỗi Server', 'Không thể kết nối Backend.', 'error');
+                swalIOS.fire({ icon: 'error', title: 'Lỗi Server', text: 'Không thể kết nối Backend.' });
             } finally {
                 toggleBtnLoading(false);
             }
@@ -235,16 +278,18 @@
         function showConfirm(user) {
             swalIOS.fire({
                 html: `
-                    <div style="margin-top: 10px;">
+                    <div>
                         <div class="user-avatar-ring">
                             <img src="${user.profile_picture_url}" class="user-avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=${user.username}'">
                         </div>
-                        <h3 style="color: #fff; font-size: 18px; margin-bottom: 5px;">${user.first_name} ${user.last_name}</h3>
-                        <p style="color: #FFD700; font-size: 14px; margin-bottom: 15px;">UID: ${user.uid}</p>
+                        <h3 class="swal-user-name">${user.first_name} ${user.last_name}</h3>
+                        <span class="swal-user-uid">UID: ${user.uid}</span>
                         
-                        <a href="${user.profile_picture_url}" download="avatar_${user.username}.jpg" target="_blank" class="config-btn" style="width: auto; display: inline-flex; padding: 8px 16px; font-size: 12px; margin-bottom: 10px;">
-                            <i class="fa-solid fa-download"></i> Tải Avatar
-                        </a>
+                        <div style="margin-top: 10px;">
+                            <a href="${user.profile_picture_url}" download="avatar_${user.username}.jpg" target="_blank" class="config-btn" style="width: auto; display: inline-flex; padding: 10px 20px; font-size: 13px;">
+                                <i class="fa-solid fa-download"></i> Tải Avatar
+                            </a>
+                        </div>
                     </div>`,
                 title: 'Xác nhận tài khoản',
                 showCancelButton: true,
@@ -267,10 +312,10 @@
                 if (data.success) {
                     trackQueue(data.client_id, username);
                 } else {
-                    swalIOS.fire('Lỗi', data.msg || 'Không thể bắt đầu.', 'error');
+                    swalIOS.fire({ icon: 'error', title: 'Lỗi', text: data.msg || 'Không thể bắt đầu.' });
                 }
             } catch (e) {
-                swalIOS.fire('Lỗi', 'Lỗi kết nối khi restore.', 'error');
+                swalIOS.fire({ icon: 'error', title: 'Lỗi', text: 'Lỗi kết nối khi restore.' });
             }
         }
 
@@ -280,16 +325,16 @@
                 title: 'Đang xử lý...',
                 html: `
                     <div class="queue-container">
-                        <div style="display:flex; justify-content:space-between; color:#888; font-size:12px; text-transform:uppercase;">
-                            <span>Progress</span>
-                            <span id="q-percent">0%</span>
+                        <div style="display:flex; justify-content:space-between; color:#ccc; font-size:13px; font-weight: 600; margin-bottom: 5px;">
+                            <span>Tiến trình</span>
+                            <span id="q-percent" style="color: #FFD700;">0%</span>
                         </div>
                         <div class="progress-track">
                             <div class="progress-fill" id="bar" style="width:0%"></div>
                         </div>
                         <div class="queue-stats">
-                            <span id="q-status">Connecting...</span>
-                            <span id="q-pos">...</span>
+                            <span id="q-status">Đang kết nối...</span>
+                            <span id="q-pos">Vị trí: ...</span>
                         </div>
                     </div>`,
                 showConfirmButton: false,
@@ -310,12 +355,12 @@
                         swalIOS.fire({
                             icon: 'success',
                             title: 'Thành công!',
-                            text: 'Đã kích hoạt Gold xong. Vui lòng cài Config để giữ Gold vĩnh viễn.',
-                            confirmButtonText: 'Tuyệt vời'
+                            html: '<p style="font-size: 15px; line-height: 1.5;">Đã kích hoạt Gold xong.<br>Vui lòng cài <b>Config iOS</b> để giữ Gold vĩnh viễn.</p>',
+                            confirmButtonText: 'Tuyệt vời 😍'
                         });
                     } else if (data.status === 'error') {
                         clearTimeout(timer);
-                        swalIOS.fire('Lỗi', data.error, 'error');
+                        swalIOS.fire({ icon: 'error', title: 'Lỗi', text: data.error });
                     } else {
                         updateUI(data);
                         timer = setTimeout(poll, 1500);
@@ -343,7 +388,7 @@
                 const p = data.total_queue > 0 ? Math.max(10, (1 - (data.position / (data.total_queue + 1))) * 90) : 15;
                 bar.style.width = `${p}%`;
                 percent.innerText = `${Math.round(p)}%`;
-                status.innerText = 'Đang chờ...';
+                status.innerText = 'Đang chờ trong hàng đợi...';
                 pos.innerText = `Vị trí: #${data.position}`;
             }
         }
