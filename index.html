@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Locket Gold Unlocker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS GIỮ NGUYÊN */
+        :root { --primary: #FFD60A; --primary-gradient: linear-gradient(135deg, #FFD60A 0%, #FF9F0A 100%); --surface: rgba(28, 28, 30, 0.65); --bg-color: #000000; --text-primary: #FFFFFF; --text-secondary: #8E8E93; --radius-xl: 32px; --radius-l: 20px; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-primary); margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; background-image: radial-gradient(circle at 10% 20%, rgba(255, 214, 10, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(10, 132, 255, 0.1) 0%, transparent 40%); }
+        .app-container { width: 100%; max-width: 420px; padding: 24px; position: relative; z-index: 10; }
+        .glass-card { background: var(--surface); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: 32px 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); text-align: center; }
+        .logo-icon { font-size: 48px; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; filter: drop-shadow(0 0 15px rgba(255, 214, 10, 0.3)); }
+        h1 { font-weight: 800; font-size: 28px; margin: 0; letter-spacing: -0.5px; }
+        .badge { display: inline-block; background: rgba(255, 214, 10, 0.2); color: var(--primary); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        p.desc { color: var(--text-secondary); font-size: 14px; margin: 16px 0 32px 0; line-height: 1.5; }
+        .input-wrapper { position: relative; margin-bottom: 20px; }
+        .input-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-secondary); font-size: 18px; }
+        input { width: 100%; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); padding: 18px 20px 18px 50px; border-radius: var(--radius-l); color: white; font-size: 16px; outline: none; transition: all 0.3s; }
+        input:focus { border-color: var(--primary); background: rgba(0, 0, 0, 0.5); box-shadow: 0 0 0 4px rgba(255, 214, 10, 0.1); }
+        .btn-primary { width: 100%; background: var(--primary-gradient); border: none; padding: 18px; border-radius: var(--radius-l); color: #000; font-weight: 700; font-size: 16px; cursor: pointer; transition: transform 0.2s; display: flex; justify-content: center; align-items: center; gap: 10px; }
+        .btn-primary:hover { transform: scale(1.02); }
+        div:where(.swal2-container) div:where(.swal2-popup) { background: rgba(28, 28, 30, 0.95) !important; backdrop-filter: blur(30px); border-radius: 24px !important; border: 1px solid rgba(255,255,255,0.08); }
+        .swal2-title { color: white !important; } .swal2-html-container { color: #aeaeb2 !important; }
+        .user-preview { display: flex; flex-direction: column; align-items: center; margin-top: 10px; }
+        .user-avatar-ring { padding: 4px; border: 2px dashed var(--primary); border-radius: 50%; margin-bottom: 12px; }
+        .user-avatar-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: block; }
+        .user-name { font-weight: 700; font-size: 18px; color: white; margin-bottom: 4px; }
+        .user-detail-row { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-secondary); margin-top: 4px; background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 12px; }
+        .user-detail-row i { color: var(--primary); font-size: 12px; }
+        .queue-container { text-align: left; margin-top: 15px; background: rgba(0,0,0,0.3); padding: 16px; border-radius: 16px; }
+        .progress-header { display: flex; justify-content: space-between; font-size: 12px; color: #8E8E93; margin-bottom: 8px; text-transform: uppercase; font-weight: 600; }
+        .progress-track { height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; margin-bottom: 12px; }
+        .progress-fill { height: 100%; background: var(--primary); width: 0%; border-radius: 10px; transition: width 0.5s; box-shadow: 0 0 10px rgba(255, 214, 10, 0.5); }
+        .queue-stats { display: flex; justify-content: space-between; color: white; font-size: 14px; font-weight: 600; }
+        .spinner { width: 20px; height: 20px; border: 3px solid rgba(0,0,0,0.1); border-left-color: #000; border-radius: 50%; animation: spin 1s linear infinite; display: none; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .swal-btn-confirm { background: var(--primary) !important; color: black !important; border-radius: 12px !important; padding: 14px 24px !important; font-weight: 600 !important; width: 100%; margin-bottom: 10px; }
+        .swal-btn-cancel { background: rgba(255,255,255,0.1) !important; color: white !important; border-radius: 12px !important; padding: 14px 24px !important; font-weight: 600 !important; width: 100%; }
+        .footer-info { margin-top: 24px; display: flex; justify-content: center; gap: 15px; }
+        .info-pill { background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 20px; font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; text-decoration: none; transition: background 0.2s; }
+        .info-pill:hover { background: rgba(255, 255, 255, 0.1); color: white; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="glass-card">
+            <div class="logo-area">
+                <i class="fa-solid fa-heart logo-icon"></i>
+                <h1>Locket Gold</h1>
+                <div class="badge">Proxy Bypass</div>
+                <p class="desc">Hệ thống mở khóa Gold qua Proxy Server.</p>
+            </div>
+            <div class="input-wrapper">
+                <i class="fa-solid fa-at input-icon"></i>
+                <input type="text" id="username" placeholder="Nhập Username Locket..." autocomplete="off">
+            </div>
+            <button class="btn-primary" id="submitBtn" onclick="checkUserInfo()">
+                <span class="btn-text">Unlock Premium</span>
+                <div class="spinner" id="loader"></div>
+            </button>
+            <div class="footer-info">
+                 <a href="#" class="info-pill"><i class="fa-solid fa-shield-cat"></i> Secure Proxy</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const API_URL = '/api'; // Đã sửa ngắn gọn lại
+
+        const swalIOS = Swal.mixin({ customClass: { confirmButton: 'swal-btn-confirm', cancelButton: 'swal-btn-cancel' }, buttonsStyling: false, reverseButtons: true });
+
+        // --- HÀM 1: LẤY INFO USER ---
+        async function checkUserInfo() {
+            const username = document.getElementById('username').value.trim();
+            if (!username) return swalIOS.fire('Lỗi', 'Vui lòng nhập Username!', 'warning');
+
+            toggleLoading(true);
+
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'get-user-info', payload: { username: username } })
+                });
+                const data = await res.json();
+
+                if (res.ok && data.success) {
+                    showConfirm(data.data);
+                } else {
+                    swalIOS.fire('Thất bại', 'Không tìm thấy user này.', 'error');
+                }
+            } catch (e) {
+                swalIOS.fire('Lỗi Server', 'Không thể kết nối Backend.', 'error');
+            } finally {
+                toggleLoading(false);
+            }
+        }
+
+        // --- HÀM 2: HIỆN POPUP XÁC NHẬN ---
+        function showConfirm(user) {
+            swalIOS.fire({
+                html: `
+                    <div class="user-preview">
+                        <div class="user-avatar-ring"><img src="${user.profile_picture_url}" class="user-avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=${user.username}'"></div>
+                        <div class="user-name">${user.first_name} ${user.last_name}</div>
+                        <div class="user-detail-row"><i class="fa-solid fa-fingerprint"></i> UID: ${user.uid}</div>
+                    </div>`,
+                title: 'Xác nhận?',
+                text: 'Mở khóa Gold cho tài khoản này?',
+                showCancelButton: true,
+                confirmButtonText: 'Unlock Ngay'
+            }).then((res) => {
+                if (res.isConfirmed) startUnlock(user.username);
+            });
+        }
+
+        // --- HÀM 3: GỌI LỆNH RESTORE ---
+        async function startUnlock(username) {
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'restore', payload: { username: username } })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    trackQueue(data.client_id, username);
+                } else {
+                    swalIOS.fire('Lỗi', data.msg || 'Không thể bắt đầu.', 'error');
+                }
+            } catch (e) {
+                swalIOS.fire('Lỗi', 'Lỗi kết nối khi restore.', 'error');
+            }
+        }
+
+        // --- HÀM 4: THEO DÕI HÀNG ĐỢI ---
+        function trackQueue(clientId, username) {
+            let timer;
+            swalIOS.fire({
+                title: 'Đang xử lý...',
+                html: `<div class="queue-container"><div class="progress-header"><span>Status</span><span id="q-percent">0%</span></div><div class="progress-track"><div class="progress-fill" id="bar" style="width:0%"></div></div><div class="queue-stats"><span id="q-status">Waiting...</span><span id="q-pos">...</span></div></div>`,
+                showConfirmButton: false,
+                allowOutsideClick: false
+            });
+
+            async function poll() {
+                try {
+                    const res = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'queue-status', payload: { client_id: clientId } })
+                    });
+                    const data = await res.json();
+
+                    if (data.status === 'completed') {
+                        clearTimeout(timer);
+                        swalIOS.fire('Thành công!', 'Đã kích hoạt Gold xong.', 'success');
+                    } else if (data.status === 'error') {
+                        clearTimeout(timer);
+                        swalIOS.fire('Lỗi', data.error, 'error');
+                    } else {
+                        updateUI(data);
+                        timer = setTimeout(poll, 1500);
+                    }
+                } catch (e) {
+                    timer = setTimeout(poll, 2000);
+                }
+            }
+            poll();
+        }
+
+        function updateUI(data) {
+            const bar = document.getElementById('bar');
+            const percent = document.getElementById('q-percent');
+            const status = document.getElementById('q-status');
+            const pos = document.getElementById('q-pos');
+            
+            if(!bar) return;
+
+            if (data.status === 'processing') {
+                bar.style.width = '100%';
+                status.innerText = 'Đang kích hoạt...';
+            } else {
+                const p = data.total_queue > 0 ? Math.max(10, (1 - (data.position / (data.total_queue + 1))) * 90) : 15;
+                bar.style.width = `${p}%`;
+                percent.innerText = `${Math.round(p)}%`;
+                status.innerText = 'Đang chờ...';
+                pos.innerText = `Vị trí: #${data.position}`;
+            }
+        }
+
+        function toggleLoading(isLoading) {
+            document.getElementById('submitBtn').disabled = isLoading;
+            document.getElementById('loader').style.display = isLoading ? 'block' : 'none';
+            document.querySelector('.btn-text').style.display = isLoading ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
