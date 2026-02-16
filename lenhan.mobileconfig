@@ -34,9 +34,9 @@
           </dict>
         </array>
         <key>PayloadDescription</key>
-        <string>Cấu hình DNS Locket Gold của bạn (NextDNS)</string>
+        <string>Cấu hình DNS bảo vệ Locket Gold</string>
         <key>PayloadDisplayName</key>
-        <string>Locket Gold DNS</string>
+        <string>Locket DNS Protection</string>
         <key>PayloadIdentifier</key>
         <string>com.apple.dnsSettings.managed.bd7b97</string>
         <key>PayloadType</key>
@@ -49,10 +49,16 @@
         <false/>
       </dict>
     </array>
+    
     <key>PayloadDescription</key>
-    <string>Hồ sơ cấu hình DNS Locket Gold</string>
+    <string>Tính năng chính là Chặn request từ server của Locket, giữ tính năng Gold của Locket.</string>
+    
     <key>PayloadDisplayName</key>
     <string>Locket Gold Unlocker</string>
+    
+    <key>PayloadOrganization</key>
+    <string>LocketVN</string>
+    
     <key>PayloadIdentifier</key>
     <string>com.locket.gold.dns.bd7b97</string>
     <key>PayloadRemovalDisallowed</key>
