@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Trải Nghiệm Locket Gold Vĩnh Viên Free - Không iPA , Shadowrocket ! | Made by @vnsoftware</title>
-   
+    <title>Locket Gold Unlocker</title>
+    
     <link rel="icon" href="unnamed.jpg" type="image/jpeg">
-   
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
+    
     <style>
         /* CSS GỐC + NAV BAR */
         :root { --primary: #FFD60A; --primary-gradient: linear-gradient(135deg, #FFD60A 0%, #FF9F0A 100%); --surface: rgba(28, 28, 30, 0.65); --bg-color: #000000; --text-primary: #FFFFFF; --text-secondary: #8E8E93; --radius-xl: 32px; --radius-l: 20px; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-primary); margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; background-image: radial-gradient(circle at 10% 20%, rgba(255, 214, 10, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(10, 132, 255, 0.1) 0%, transparent 40%); }
-       
+        
         /* NAVBAR STYLE */
         .navbar {
             width: 100%;
@@ -46,6 +46,7 @@
             object-fit: cover;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .app-container { width: 100%; max-width: 420px; padding: 24px; position: relative; z-index: 10; margin-top: auto; margin-bottom: auto; }
         .glass-card { background: var(--surface); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: 32px 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); text-align: center; }
         .logo-icon { font-size: 48px; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; filter: drop-shadow(0 0 15px rgba(255, 214, 10, 0.3)); }
@@ -75,25 +76,21 @@
         @keyframes spin { 100% { transform: rotate(360deg); } }
         .swal-btn-confirm { background: var(--primary) !important; color: black !important; border-radius: 12px !important; padding: 14px 24px !important; font-weight: 600 !important; width: 100%; margin-bottom: 10px; }
         .swal-btn-cancel { background: rgba(255,255,255,0.1) !important; color: white !important; border-radius: 12px !important; padding: 14px 24px !important; font-weight: 600 !important; width: 100%; }
-       
+        
         .footer-info { margin-top: 24px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .info-pill { background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 20px; font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; text-decoration: none; transition: background 0.2s; }
         .info-pill:hover { background: rgba(255, 255, 255, 0.1); color: white; }
-
-        /* Thêm style cho nút tải avatar */
-        .download-btn { background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 12px; font-size: 14px; color: var(--primary); text-decoration: none; margin-top: 12px; display: inline-block; transition: background 0.2s; }
-        .download-btn:hover { background: rgba(255, 255, 255, 0.1); color: white; }
-        .download-btn i { margin-right: 6px; }
     </style>
 </head>
 <body>
-   
+    
     <nav class="navbar">
         <a href="/" class="nav-brand">
             <img src="unnamed.jpg" alt="Logo" class="nav-logo">
             <span>LocketVN</span>
         </a>
     </nav>
+
     <div class="app-container">
         <div class="glass-card">
             <div class="logo-area">
@@ -102,35 +99,39 @@
                 <div class="badge">Proxy Bypass</div>
                 <p class="desc">Hệ thống mở khóa Gold qua Proxy Server.</p>
             </div>
-           
+            
             <div class="input-wrapper">
                 <i class="fa-solid fa-at input-icon"></i>
                 <input type="text" id="username" placeholder="Nhập Username Locket..." autocomplete="off">
             </div>
-           
+            
             <button class="btn-primary" id="submitBtn" onclick="checkUserInfo()">
                 <span class="btn-text">Unlock Premium</span>
                 <div class="spinner" id="loader"></div>
             </button>
-           
+            
             <div class="footer-info">
                  <a href="#" class="info-pill" onclick="return false;"><i class="fa-solid fa-shield-cat"></i> Secure Proxy</a>
-                
+                 
                  <a href="lenhan.mobileconfig" class="info-pill" style="border: 1px solid rgba(255, 255, 255, 0.1);">
                     <i class="fa-solid fa-gear"></i> Tải Config iOS
                  </a>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const API_URL = '/api';
+        const API_URL = '/api'; 
+
         const swalIOS = Swal.mixin({ customClass: { confirmButton: 'swal-btn-confirm', cancelButton: 'swal-btn-cancel' }, buttonsStyling: false, reverseButtons: true });
-        // --- HÀM 1: LẤY INFO USER ---
+
         async function checkUserInfo() {
             const username = document.getElementById('username').value.trim();
             if (!username) return swalIOS.fire('Lỗi', 'Vui lòng nhập Username!', 'warning');
+
             toggleLoading(true);
+
             try {
                 const res = await fetch(API_URL, {
                     method: 'POST',
@@ -138,6 +139,7 @@
                     body: JSON.stringify({ action: 'get-user-info', payload: { username: username } })
                 });
                 const data = await res.json();
+
                 if (res.ok && data.success) {
                     showConfirm(data.data);
                 } else {
@@ -149,25 +151,34 @@
                 toggleLoading(false);
             }
         }
-        // --- HÀM 2: HIỆN POPUP XÁC NHẬN ---
+
+        // --- HÀM 2: HIỆN POPUP XÁC NHẬN + NÚT TẢI AVATAR ---
         function showConfirm(user) {
             swalIOS.fire({
                 html: `
                     <div class="user-preview">
-                        <div class="user-avatar-ring"><img src="${user.profile_picture_url}" class="user-avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=${user.username}'"></div>
+                        <div class="user-avatar-ring">
+                            <img src="${user.profile_picture_url}" class="user-avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=${user.username}'">
+                        </div>
                         <div class="user-name">${user.first_name} ${user.last_name}</div>
                         <div class="user-detail-row"><i class="fa-solid fa-fingerprint"></i> UID: ${user.uid}</div>
-                        <a href="${user.profile_picture_url}" download="avatar_${user.username}.jpg" class="download-btn"><i class="fa-solid fa-download"></i> Tải Avatar</a>
+                        
+                        <div style="margin-top: 10px;">
+                            <a href="${user.profile_picture_url}" download="avatar_${user.username}.jpg" target="_blank" class="info-pill" style="display:inline-flex; border: 1px solid rgba(255,255,255,0.2);">
+                                <i class="fa-solid fa-download"></i> Tải Avatar
+                            </a>
+                        </div>
                     </div>`,
                 title: 'Xác nhận?',
                 text: 'Mở khóa Gold cho tài khoản này?',
                 showCancelButton: true,
-                confirmButtonText: 'Unlock Ngay'
+                confirmButtonText: 'Unlock Ngay',
+                cancelButtonText: 'Hủy'
             }).then((res) => {
                 if (res.isConfirmed) startUnlock(user.username);
             });
         }
-        // --- HÀM 3: GỌI LỆNH RESTORE ---
+
         async function startUnlock(username) {
             try {
                 const res = await fetch(API_URL, {
@@ -176,6 +187,7 @@
                     body: JSON.stringify({ action: 'restore', payload: { username: username } })
                 });
                 const data = await res.json();
+
                 if (data.success) {
                     trackQueue(data.client_id, username);
                 } else {
@@ -185,7 +197,7 @@
                 swalIOS.fire('Lỗi', 'Lỗi kết nối khi restore.', 'error');
             }
         }
-        // --- HÀM 4: THEO DÕI HÀNG ĐỢI ---
+
         function trackQueue(clientId, username) {
             let timer;
             swalIOS.fire({
@@ -194,6 +206,7 @@
                 showConfirmButton: false,
                 allowOutsideClick: false
             });
+
             async function poll() {
                 try {
                     const res = await fetch(API_URL, {
@@ -202,6 +215,7 @@
                         body: JSON.stringify({ action: 'queue-status', payload: { client_id: clientId } })
                     });
                     const data = await res.json();
+
                     if (data.status === 'completed') {
                         clearTimeout(timer);
                         swalIOS.fire('Thành công!', 'Đã kích hoạt Gold xong.', 'success');
@@ -218,13 +232,15 @@
             }
             poll();
         }
+
         function updateUI(data) {
             const bar = document.getElementById('bar');
             const percent = document.getElementById('q-percent');
             const status = document.getElementById('q-status');
             const pos = document.getElementById('q-pos');
-           
+            
             if(!bar) return;
+
             if (data.status === 'processing') {
                 bar.style.width = '100%';
                 status.innerText = 'Đang kích hoạt...';
@@ -236,6 +252,7 @@
                 pos.innerText = `Vị trí: #${data.position}`;
             }
         }
+
         function toggleLoading(isLoading) {
             document.getElementById('submitBtn').disabled = isLoading;
             document.getElementById('loader').style.display = isLoading ? 'block' : 'none';
