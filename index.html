@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Locket Gold Unlocker - LocketVN</title>
+    <title>Trải Nghiệm Locket Gold Vĩnh Viên Free - Không iPA , Shadowrocket ! | LOCKET.VN</title>
     
     <link rel="icon" href="unnamed.jpg" type="image/jpeg">
     
@@ -115,7 +115,7 @@
     <div id="loadingScreen" class="loading-screen">
         <div class="loading-container">
             <div class="loading-spinner"></div>
-            <div class="loading-text">LOCKETVN GOLD</div>
+            <div class="loading-text">LOCKET.VN</div>
         </div>
     </div>
 
@@ -123,17 +123,17 @@
         <div class="welcome-content">
             <div style="font-size: 50px; margin-bottom: 15px;">👋</div>
             <h2 class="gold-text" style="font-size: 26px; margin-bottom: 10px;">Xin chào!</h2>
-            <p style="color: #bbb; margin-bottom: 25px; line-height: 1.5; font-size: 15px;">Chào mừng bạn đến với hệ thống kích hoạt Locket Gold miễn phí của LocketVN.</p>
+            <p style="color: #bbb; margin-bottom: 25px; line-height: 1.5; font-size: 15px;">Chào mừng bạn đến với hệ thống kích hoạt Locket Gold miễn phí của LocketVN !</p>
             
             <div style="background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.2); padding: 18px; border-radius: 16px; text-align: left; margin-bottom: 25px; display: flex; gap: 12px; align-items: flex-start;">
                 <i class="fa-solid fa-lightbulb" style="color: #FFD700; font-size: 20px; margin-top: 2px;"></i>
                 <div>
                     <strong style="color: #FFD700; font-size: 15px;">Lưu ý quan trọng:</strong><br>
-                    <span style="font-size: 14px; color: #ccc; line-height: 1.4; display: block; margin-top: 5px;">Vui lòng tải và cài đặt <b>Config iOS</b> trước khi kích hoạt để tránh bị mất Gold sau này.</span>
+                    <span style="font-size: 14px; color: #ccc; line-height: 1.4; display: block; margin-top: 5px;">Vui lòng tải và cài đặt <b>Config iOS</b> sau khi kích hoạt để tránh bị mất Gold sau này. Xóa luôn ứng dụng Locket hiện tại , xóa cả cấu hình có liên quan <b>(Nếu có cài trước đó)</b>. Truy cập Appstore và cài đặt lại ứng dụng Locket rồi đăng nhập tài khoản như bình thường vào, sau đó truy cập lại website này để nhập username Locket của bạn để kích hoạt Locket. Sau khi Website báo chạy thành công thì bạn vào lại ứng dụng Locket để kiểm tra có gói Gold chưa, nếu chưa thì lặp lại bước đầu tới khi thành công. Sau khi kích hoạt xong thì vui lòng cài đặt file cấu hình DNS trong nút <b>Tải Config</b> dưới nút kích hoạt để giữ gói Gold không bị mất hoặc văng </span>
                 </div>
             </div>
 
-            <button class="welcome-btn btn-ok" onclick="closeWelcomeModal()">Bắt đầu ngay 🚀</button>
+            <button class="welcome-btn btn-ok" onclick="closeWelcomeModal()">Bắt đầu ngay</button>
             <button class="welcome-btn btn-skip" onclick="hideWelcomeModalFor24Hours()">Không hiện lại (24h)</button>
         </div>
     </div>
@@ -154,7 +154,7 @@
         <div class="card glass">
             <div class="card-header">
                 <h2>Locket Gold</h2>
-                <p>Hệ thống Proxy Unlocker Vĩnh Viễn</p>
+                <p>Kích Hoạt Locket Gold Vĩnh Viễn</p>
             </div>
 
             <div class="form-group">
@@ -168,7 +168,7 @@
             </button>
 
             <a href="lenhan.mobileconfig" class="config-btn">
-                <i class="fa-brands fa-apple" style="font-size: 18px;"></i> Tải Config Chống Revoke (iOS)
+                <i class="fa-brands fa-apple" style="font-size: 18px;"></i> Tải Config Chống Văng Gold (Only iOS)
             </a>
 
             <div class="features">
@@ -212,7 +212,7 @@
     </div>
 
     <footer>
-        © 2026 LocketVN | Made by @lenhan
+        © 2026 LocketVN | Developed by @VNSoftware
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -382,7 +382,7 @@
 
             if (data.status === 'processing') {
                 bar.style.width = '100%';
-                status.innerText = 'Đang tiêm Gold...';
+                status.innerText = 'Đang kích hoạt gói Gold...';
                 percent.innerText = '100%';
             } else {
                 const p = data.total_queue > 0 ? Math.max(10, (1 - (data.position / (data.total_queue + 1))) * 90) : 15;
